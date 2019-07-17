@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque:500&display=swap');
+
+
+
+
+:root {
+  /* Set fade in duration */
+  --fade-time: 0.5s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+.heading {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.info, .specs {
+  font-family: 'Darker Grotesque', sans-serif;
+  text-align: center;
+
+}
+.container {
+  max-width: 760px;
+  margin: auto;
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--fade-time) ease-in 1 forwards;
+}
+
+/* Media Queries */
+@media(max-width: 600px) {
+  .imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* nav */
+
+ul {
+  list-style-type: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: pink;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: pink;
+  color: white;
+  text-align: center;
+  padding: 1px;
+}
+
+
+.footer p {
+font-family: 'Darker Grotesque', sans-serif;
+font-size: 18px;
+
+}
